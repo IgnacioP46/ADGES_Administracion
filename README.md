@@ -1,16 +1,99 @@
-# React + Vite
+# 🏢 ADGES - Administración de Fincas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web corporativa profesional desarrollada para **ADGES**, una empresa de administración de fincas en Madrid (Chamberí).
 
-Currently, two official plugins are available:
+El proyecto es una **Landing Page** moderna, rápida y totalmente responsive, diseñada para captar clientes y facilitar el contacto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Estado del Proyecto](https://img.shields.io/badge/Estado-Terminado-success)
+![React](https://img.shields.io/badge/React-v18+-blue)
+![Vite](https://img.shields.io/badge/Build-Vite-purple)
 
-## React Compiler
+## 🚀 Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Diseño Responsive:** Adaptado a móviles, tablets y escritorio.
+- **Formulario de Contacto:** Integrado con **EmailJS** para envío de correos en tiempo real.
+- **Validaciones:** Control de errores en el formulario (campos obligatorios, formatos correctos).
+- **Mapa Interactivo:** Integración con Google Maps.
+- **SEO Optimizado:** Uso de `react-helmet-async` y datos estructurados (JSON-LD) para posicionamiento local.
+- **UI Moderna:** Animaciones suaves y diseño limpio.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Core:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Estilos:** CSS3 Modular (BEM) + Tailwind CSS (para estructura base)
+- **Funcionalidades:**
+  - `emailjs-browser` (Envíos de email)
+  - `sweetalert2` (Alertas bonitas)
+  - `react-helmet-async` (SEO)
+  - `lucide-react` (Iconos)
+
+## 📦 Instalación y Uso Local
+
+Si quieres probar este proyecto en tu ordenador:
+
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/IgnacioP46/ADGES_Administracion.git
+
+   cd adges-admin
+   npm install
+   Configura las Variables de Entorno: Crea un archivo .env en la raíz y añade tus claves de EmailJS:
+   ```
+
+Fragmento de código
+VITE_EMAIL_SERVICE_ID=tu_service_id
+VITE_EMAIL_TEMPLATE_ID=tu_template_id
+VITE_EMAIL_PUBLIC_KEY=tu_public_key
+Inicia el servidor de desarrollo:
+
+npm run dev
+
+---
+
+### 2. Cómo subirlo a GitHub (Paso a paso)
+
+Para entender visualmente lo que vamos a hacer, aquí tienes un esquema de cómo funciona Git:
+
+Sigue estos pasos en tu terminal (VS Code):
+
+#### Paso A: Preparación (IMPORTANTE)
+
+Asegúrate de tener un archivo llamado `.gitignore` en la raíz. Si no lo tienes, créalo y escribe dentro esto (para no subir basura ni tus claves privadas):
+
+```text
+node_modules
+.env
+dist
+.DS_Store
+Paso B: Comandos de subida
+Si es la primera vez que subes este proyecto:
+
+Ve a GitHub.com, inicia sesión y crea un "New Repository".
+
+Nombre: ADGES_Administracion
+
+Público o Privado (tu elección).
+
+NO marques "Add a README file" (ya lo hemos creado nosotros).
+
+En tu terminal de VS Code, ejecuta estos comandos uno por uno:
+
+# 1. Iniciar Git (si no lo has hecho ya)
+git init
+
+# 2. Añadir todos los archivos a la zona de "preparación"
+git add .
+
+# 3. Guardar los cambios (Hacer la "foto" del código)
+git commit -m "Versión inicial: Web completa con Formulario y SEO"
+
+# 4. Renombrar la rama a 'main' (estándar moderno)
+git branch -M main
+
+# 5. Conectar tu PC con GitHub (Copia la URL de TU repositorio)
+git remote add origin https://github.com/TU_USUARIO_GITHUB/ADGES_Administracion.git
+
+# 6. Enviar los archivos a la nube
+git push -u origin main
+```
