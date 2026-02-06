@@ -1,0 +1,48 @@
+.topbar-container {
+    background-color: #4c87ac;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* En móviles, apilamos los elementos o los ajustamos */
+@media (max-width: 600px) {
+    .topbar-content {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Animación suave para que el tiempo no salte bruscamente */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

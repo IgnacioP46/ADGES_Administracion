@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Evita scroll lateral indeseado */
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos personalizados para la barra de scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e3b555;
+}
+
+/* Selección de texto en color corporativo */
+::selection {
+  background-color: #e3b555;
+  color: white;
+}

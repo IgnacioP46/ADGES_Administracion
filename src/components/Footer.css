@@ -1,0 +1,146 @@
+/* --- FOOTER PRINCIPAL --- */
+.footer-section {
+    background-color: #1e293b;
+    /* Color oscuro corporativo */
+    color: #f8fafc;
+    padding: 4rem 0 2rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+/* Diseño Responsive: 2 columnas en tablet, 4 en PC */
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+        /* Columna 1 y 3 más anchas */
+    }
+}
+
+/* --- COLUMNAS --- */
+.footer-col h3 {
+    color: #e3b555;
+    /* Dorado corporativo */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequeña línea bajo los títulos */
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 40px;
+    height: 2px;
+    background-color: #e3b555;
+}
+
+.footer-text {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* --- ENLACES RÁPIDOS --- */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: #e3b555;
+    transform: translateX(5px);
+    /* Efecto de movimiento */
+}
+
+/* --- CONTACTO (Iconos y texto) --- */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-icon {
+    color: #e3b555;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.contact-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1.5;
+}
+
+.contact-link:hover {
+    color: #e3b555;
+}
+
+/* --- IMÁGENES / LOGOS --- */
+.footer-logos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-association-img {
+    height: 60px;
+    /* Altura fija para uniformidad */
+    width: auto;
+    background-color: white;
+    /* Fondo blanco si el logo es transparente */
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.footer-association-img:hover {
+    opacity: 1;
+}
+
+/* --- BARRA DE COPYRIGHT --- */
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #334155;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.heart {
+    color: #e3b555;
+}

@@ -1,0 +1,124 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.hero-container {
+    position: relative;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-color: #0f172a;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* --- IMAGEN DE FONDO --- */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* --- CAPA OSCURA (Overlay) --- */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.4);
+    z-index: 1;
+}
+
+/* --- CONTENEDOR DEL CONTENIDO --- */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* --- TARJETA SEMITRANSPARENTE (Glass Effect) --- */
+.hero-glass-card {
+    background-color: rgba(15, 23, 42, 0.7);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .hero-glass-card {
+        padding: 4rem;
+    }
+}
+
+/* --- TÍTULO GIGANTE --- */
+.hero-title {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.025em;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+}
+
+/* --- SUBTÍTULO --- */
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+    color: #e5e7eb;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 2.25rem;
+    }
+}
+
+/* --- BOTÓN GIGANTE --- */
+.hero-btn {
+    background-color: white;
+    color: #0f172a;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn:hover {
+    background-color: #e3b555;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:active {
+    transform: scale(0.95);
+    /* Efecto de click */
+}

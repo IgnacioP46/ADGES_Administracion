@@ -1,0 +1,227 @@
+/* src/components/Contact.css */
+
+/* --- SECCIÓN PRINCIPAL --- */
+.contact-section {
+    background-color: #f1f5f9;
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- TÍTULO --- */
+.contact-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.contact-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .contact-title {
+        font-size: 3rem;
+    }
+}
+
+.contact-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #e3b555;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 999px;
+}
+
+/* --- GRID --- */
+.contact-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .contact-grid {
+        /* Formulario a la izquierda (1.2 partes), Mapa a la derecha (0.8 partes) */
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: stretch;
+        /* Estira el mapa para que sea igual de alto que el form */
+    }
+}
+
+/* --- FORMULARIO --- */
+.contact-form-card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #e3b555;
+}
+
+/* Grids internos del form */
+.form-row {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .form-row.two-cols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-row.address-grid {
+        grid-template-columns: 2fr 0.8fr 0.8fr;
+    }
+
+    .form-row.address-extra {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-label .required {
+    color: #e3b555;
+    margin-left: 2px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.85rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #f8fafc;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    background-color: #fff;
+    border-color: #e3b555;
+    box-shadow: 0 0 0 3px rgba(227, 181, 85, 0.2);
+}
+
+.form-input.input-error,
+.form-textarea.input-error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+/* Botón */
+.submit-btn {
+    width: 100%;
+    background-color: #1e293b;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #e3b555;
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* --- MAPA --- */
+.map-container {
+    width: 100%;
+    /* En móvil altura fija, en PC se estira gracias a 'align-items: stretch' del grid padre */
+    height: 400px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+}
+
+@media (min-width: 1024px) {
+    .map-container {
+        height: 100%;
+        /* Ocupa toda la altura disponible en PC */
+        min-height: 500px;
+        /* Por seguridad */
+    }
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilo para el desplegable (select) */
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+/* Feedback positivo (Borde Verde si está correcto) */
+.form-input.input-success,
+.form-textarea.input-success,
+.form-select.input-success {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+/* Ajuste de mensaje de error */
+.error-msg {
+    color: #dc2626;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.error-msg::before {
+    content: '⚠ ';
+    margin-right: 4px;
+}

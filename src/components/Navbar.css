@@ -1,0 +1,126 @@
+/* --- Variables de color --- */
+:root {
+    --adges-gold: #4c87ac;
+    --adges-dark: #1e293b;
+    --white: #ffffff;
+}
+
+/* --- Estilos Generales del Navbar --- */
+.navbar-container {
+    background-color: var(--adges-gold);
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- LOGO --- */
+.logo-container img {
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+    display: block;
+}
+
+/* --- MENÚ DE ESCRITORIO (PC) --- */
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--adges-dark);
+}
+
+.btn-contact {
+    background-color: var(--adges-dark);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-contact:hover {
+    opacity: 0.9;
+}
+
+/* --- BOTÓN HAMBURGUESA (Móvil) --- */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- MENÚ DESPLEGABLE (Móvil) --- */
+.mobile-dropdown {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--adges-gold);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-link {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   MEDIA QUERIES (La magia para Móvil vs PC)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .desktop-menu {
+        display: none;
+        /* Ocultamos los enlaces de PC */
+    }
+
+    .mobile-toggle {
+        display: block;
+        /* Mostramos el botón hamburguesa */
+    }
+}
