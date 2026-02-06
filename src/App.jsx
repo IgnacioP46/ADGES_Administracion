@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Importar estilos de la animación
+import 'aos/dist/aos.css';
+import SEO from './components/SEO';
 
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="font-sans text-gray-800 bg-gray-50 overflow-x-hidden">
+      <SEO />
       <TopBar />
       <Navbar />
       <Hero />
